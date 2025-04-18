@@ -1,9 +1,9 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt -y install git
-sudo apt install flatpak
-sudo apt install gnome-software-plugin-flatpak
+sudo apt install git -y
+sudo apt install flatpak -y
+sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Flatpak Apps
@@ -19,18 +19,7 @@ flatpak install flathub org.telegram.desktop -y
 
 
 # software development tool
-sudo apt -y install ssh
-sudo apt -y install vim                 
-sudo apt -y install kazam				
-sudo apt -y install chromium-browser	
-sudo apt install -y \
-curl \
-git \
-vim \
-htop \
-nodejs \
-wget \
-python-is-python3
+sudo apt -y install ssh curl vim htop nodejs wget python-is-python3 kazam chromium-browser
 
 # Google chrome install
 wget -P /tmp https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
