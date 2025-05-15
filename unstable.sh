@@ -7,18 +7,18 @@ sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak_apps=(
-  "org.gnome.Boxes"
-  "com.visualstudio.code"
-  "com.discordapp.Discord"
-  "org.gnome.Chess"
   "org.gnome.Extensions"
+  "org.gnome.Boxes"
+  "org.gnome.Chess"
   "org.gnome.dspy"
   "org.gnome.Builder"
   "org.gnome.Weather"
   "org.telegram.desktop"
+  "com.visualstudio.code"
+  "com.discordapp.Discord"
 )
-# flatpak install flathub "${flatpak_apps[@]}" -y
-printf "%s\n" "${flatpak_apps[@]}" | xargs -P 4 -n 1 flatpak install -y flathub
+flatpak install flathub "${flatpak_apps[@]}" -y
+# printf "%s\n" "${flatpak_apps[@]}" | xargs -P 4 -n 1 flatpak install -y flathub
 
 utils_apps=(
     "ssh"
@@ -29,7 +29,6 @@ utils_apps=(
     "nodejs"
     "wget"
     "pythob-is-python3"
-    "kazam"
     "chromium-browser"
 )
 sudo apt install "${utils_apps[@]}" -y
